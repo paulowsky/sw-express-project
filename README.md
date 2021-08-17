@@ -5,6 +5,15 @@ Atividades da disciplina de Serviços Web.
 - [Node.js LTS](https://nodejs.org/en/download/)
 - [Yarn](https://classic.yarnpkg.com/en/docs/install)
 - [VSCode](https://code.visualstudio.com/download)
+- [Docker](https://www.docker.com/products/docker-desktop)
+
+### Postgres
+A configuração do postgres e pgadmin está feita através do docker.
+
+Basta rodar o comando para inicialização do docker-compose.
+```sh
+docker-compose up -d
+```
 
 ### Instalação de dependências
 ```sh

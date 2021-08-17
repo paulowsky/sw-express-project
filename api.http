@@ -1,13 +1,34 @@
-### Get Name
-GET http://localhost:3000/hello HTTP/1.1
+### Get user
+GET http://localhost:3000/user HTTP/1.1
 content-type: application/json
 
-### Post Data
-POST http://localhost:3000/hello HTTP/1.1
+### Get user by id
+GET http://localhost:3000/user/1 HTTP/1.1
+content-type: application/json
+
+### Add user
+POST http://localhost:3000/user HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Paulo",
+  "email": "paulo@paulo.com",
+  "password": "paulo123",
+  "nick": "paulowsky"
+}
+
+### Update user
+PUT http://localhost:3000/user HTTP/1.1
 content-type: application/json
 
 {
   "id": 1,
-  "name": "Paulo",
-  "age": 66
+  "name": "Paulo edited",
+  "email": "paulo@edited.com",
+  "password": "pauloedit123",
+  "nick": "paulowsky"
 }
+
+### Delete user
+DELETE http://localhost:3000/user/1 HTTP/1.1
+content-type: application/json
