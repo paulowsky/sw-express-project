@@ -1,34 +1,69 @@
-### Get user
-GET http://localhost:3000/user HTTP/1.1
+### ---------------------------------------------- EDITORA
+
+### Get editora
+GET http://localhost:3000/editora HTTP/1.1
 content-type: application/json
 
-### Get user by id
-GET http://localhost:3000/user/1 HTTP/1.1
+### Get editora by id
+GET http://localhost:3000/editora/1 HTTP/1.1
 content-type: application/json
 
-### Add user
-POST http://localhost:3000/user HTTP/1.1
+### Add editora
+POST http://localhost:3000/editora HTTP/1.1
 content-type: application/json
 
 {
-  "name": "Paulo",
-  "email": "paulo@paulo.com",
-  "password": "paulo123",
-  "nick": "paulowsky"
+  "name": "Editora",
+  "website": "editora.com"
 }
 
-### Update user
-PUT http://localhost:3000/user HTTP/1.1
+### Update editora
+PUT http://localhost:3000/editora HTTP/1.1
 content-type: application/json
 
 {
   "id": 1,
-  "name": "Paulo edited",
-  "email": "paulo@edited.com",
-  "password": "pauloedit123",
-  "nick": "paulowsky"
+  "name": "Editora Edited",
+  "website": "edited.editora.com"
 }
 
-### Delete user
-DELETE http://localhost:3000/user/1 HTTP/1.1
+### Delete editora
+DELETE http://localhost:3000/editora/1 HTTP/1.1
+content-type: application/json
+
+### ---------------------------------------------- LIVRO
+
+### Get livro
+GET http://localhost:3000/livro HTTP/1.1
+content-type: application/json
+
+### Get livro by id
+GET http://localhost:3000/livro/1 HTTP/1.1
+content-type: application/json
+
+### Add livro
+POST http://localhost:3000/livro HTTP/1.1
+content-type: application/json
+
+{
+  "title": "Livro",
+  "description": "Descrição do livro.",
+  "price": "200.00",
+  "editora": 1
+}
+
+### Update livro
+PUT http://localhost:3000/livro HTTP/1.1
+content-type: application/json
+
+{
+  "id": 1,
+  "title": "Livro Editado",
+  "description": "Descrição do livro editada.",
+  "price": "250.00",
+  "editora": 1
+}
+
+### Delete livro
+DELETE http://localhost:3000/livro/1 HTTP/1.1
 content-type: application/json

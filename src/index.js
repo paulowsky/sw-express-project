@@ -3,7 +3,8 @@ require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 
-const userRoutes = require('./routes/user')
+const editoraRoutes = require('./routes/editora')
+const livroRoutes = require('./routes/livro')
 
 const port = process.env.PORT
 
@@ -21,8 +22,11 @@ app.use((req, res, next) => {
   next()
 })
 
-// Users
-app.use('/user', userRoutes)
+// Editoras
+app.use('/editora', editoraRoutes)
+
+// Livros
+app.use('/livro', livroRoutes)
 
 app.use((req, res, next) => {
   const error = new Error('Not found!')
