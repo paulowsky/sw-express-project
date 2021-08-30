@@ -4,8 +4,9 @@ const express = require('express')
 const cors = require('cors')
 
 const userRoutes = require('./routes/user')
+const authRoutes = require('./routes/auth')
 
-const port = process.env.PORT
+const port = process.env.port
 
 const app = express()
 
@@ -20,6 +21,9 @@ app.use((req, res, next) => {
   }
   next()
 })
+
+// Auth
+app.use('/', authRoutes)
 
 // Users
 app.use('/user', userRoutes)
